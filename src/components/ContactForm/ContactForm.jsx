@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 
+import PropTypes from 'prop-types';
 export function ContactForm({addContact}) {
   const initialValues = {
       name: '',
@@ -28,4 +29,8 @@ export function ContactForm({addContact}) {
       </Form>
     </Formik>
   );
-}
+};
+
+ContactForm.propTypes = {
+  addContact: PropTypes.func.isRequired,
+};
